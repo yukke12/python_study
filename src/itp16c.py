@@ -6,15 +6,16 @@
 
 print "start"
 
-i = 0
-f = open("../data/itp16c.txt", "r")
+j = 0
+fo = open("../data/itp16c.txt", "r")
+fw = open("../data/itp16c_tmp.txt", "w")
 
-for line in f:
+for line in fo:
+    j += 1
     print line.strip()
-    if(i % 3 == 0 and i != 0):
+    if(j % 3 == 0):
         print "################"
-    i += 1
 
-f.close()
+fo.close()
 
 print "end"
