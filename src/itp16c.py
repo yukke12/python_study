@@ -6,16 +6,54 @@
 
 print "start"
 
-j = 0
+import os
+
+# 棟番号
+tou_num = 1
+# 階番号
+kai_num = 1
+# 部屋番号
+hey_num = 1
+
+tou_f = 0
+
 fo = open("../data/itp16c.txt", "r")
 fw = open("../data/itp16c_tmp.txt", "w")
 
-for line in fo:
-    j += 1
-    print line.strip()
-    if(j % 3 == 0):
-        print "################"
+# b:棟番号、f:階番号、r:左からの番目、v:人数
+b, f, r, v = 4, 2, 5, 2
 
+str_out = ""
+
+for line in fo:
+    len_r = len(line)
+    for k in range(len_r):
+        if (tou_num == b and kai_num == f and k == r - 1):
+            str_out = str_out + str(v)
+        else:
+            str_out = str_out + line[k:k + 1]
+    if(kai_num % 3 == 0):
+        tou_num += 1
+        kai_num = 1
+        tou_f = 1
+        str_out = str_out
+        # + "################" + os.linesep
+        # print "################"
+    if tou_f == 0:
+        kai_num += 1
+        tou_f = 0
+    else:
+        kai_num = 1
+        tou_f = 0
+
+fw.write(str_out)
+
+fw.close()
 fo.close()
+
+os.remove("../data/itp16c.txt")
+os.rename("../data/itp16c_tmp.txt", "../data/itp16c.txt")
+
+print str_out
 
 print "end"
