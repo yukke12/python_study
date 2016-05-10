@@ -1,0 +1,10 @@
+/Users/shirai/PycharmProjects/python_study/image_analysis/fruit/data/banana/35/2_29.jpg 0
+/Users/shirai/PycharmProjects/python_study/image_analysis/fruit/data/banana/35/2_33.jpg 0
+/Users/shirai/PycharmProjects/python_study/image_analysis/fruit/data/banana/35/3_3.png 0
+/Users/shirai/PycharmProjects/python_study/image_analysis/fruit/data/banana/35/3_5.png 0
+/Users/shirai/PycharmProjects/python_study/image_analysis/fruit/data/banana/35/3_9.jpg 0
+/Users/shirai/PycharmProjects/python_study/image_analysis/fruit/data/strawberry/35/4_2.jpg 1
+/Users/shirai/PycharmProjects/python_study/image_analysis/fruit/data/strawberry/35/4_22.jpg 1
+/Users/shirai/PycharmProjects/python_study/image_analysis/fruit/data/strawberry/35/5_43.jpg 1
+/Users/shirai/PycharmProjects/python_study/image_analysis/fruit/data/strawberry/35/6_6.jpg 1
+/Users/shirai/PycharmProjects/python_study/image_analysis/fruit/data/strawberry/35/6_17.jpg 1
