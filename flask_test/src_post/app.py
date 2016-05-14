@@ -31,13 +31,17 @@ def post_content(title=None):
     if title is None:
         abort(404)
     content = WikiContent.query.filter_by(title=title).first()
+    # contentが取得できていなければinsertするため、WikiContentのインスタンスを生成
     if content is None:
         content = WikiContent(title,
                               request.form["body"]
                               )
+    # contentが取得できていればupdateするため、bodyの内容とdatetime=現在時刻をセット
     else:
         content.body = request.form["body"]
         content.date = datetime.now()
+
+    # contentの内容をaddしてcommit
     db_session.add(content)
     db_session.commit()
     return content.body
