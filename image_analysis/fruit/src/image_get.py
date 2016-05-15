@@ -14,8 +14,6 @@ for i,line in enumerate(conf_file):
     if i == 1:
         BING_API_KEY = line_list[1].strip()
 
-print
-
 def bing_search_api(
         search_query,
 		skip,
