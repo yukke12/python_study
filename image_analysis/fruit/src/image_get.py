@@ -97,6 +97,8 @@ if __name__ == '__main__':
     args = sys.argv
     search_query = " ".join(args[1:])
     # search_query = 'ごみ'
+
+    # 取得したい枚数に応じて、rangeの第2引数を増やすこと。1増やすと、取得枚数が50枚増える。
     for i in range(0, 1):
 	    search_result = bing_search_api(search_query, i)
 	    image_url_list = get_image_url_list(search_result)
